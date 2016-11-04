@@ -6,6 +6,9 @@
     <%= bootstrap_form_for @reference do |f| %>
     <%= render 'shared/error_messages' %>
 
+    <%= f.text_field :userid, label: "User ID", value: current_user.id, disabled: true, class: 'form-control' %>
+
+<br>
 
       <%= f.number_field :number, label: "Reference number", class: 'form-control', :required => true %>
 
@@ -28,10 +31,6 @@
 
       <%= f.date_select :pubdate, :prompt => {:year => "Year", :month => "Month"},
       :start_year => 1800, :end_year => 2016, :discard_day => true, :label => "Publication Date" %>
-
-<br>
-
-      <%= f.text_field :userid, label: "User ID",class: 'form-control' %>
 
 <br>
 
