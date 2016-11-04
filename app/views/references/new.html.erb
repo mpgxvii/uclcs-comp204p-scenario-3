@@ -6,7 +6,7 @@
     <%= bootstrap_form_for @reference do |f| %>
     <%= render 'shared/error_messages' %>
 
-    <%= f.text_field :userid, label: "User ID", value: current_user.id, disabled: true, class: 'form-control' %>
+    <%= f.text_field :userid, :readonly => true, label: "User ID", value: current_user.id, class: 'form-control' %>
 
 <br>
 
@@ -20,7 +20,7 @@
 
 <br>
 
-      <%= f.text_field :title, label: "Article title", class: 'form-control', :required => true  %>
+      <%= f.text_field :title, label: "Title", class: 'form-control', :required => true  %>
 
 
 <br>
